@@ -8,26 +8,85 @@
   </head>
   <body>
     <div class="container">
-      <nav>
-
+      <nav class="navbar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pigzeus">Pig Dice</a></li>
+          <li><a href="#help">Help</a></li>
+        </ul>
       </nav>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-header text-center">
-              Pig Dice
-            </div>
-            <div class="card-body">
-              <h4 class="card-text">Play the Game</h4>
-              <p class="card-text">To start the game please choose a player name</p>
+      <section id="about">
 
+        <div class="row">
+
+            <div class="card">
+              <div class="card-header text-center">
+                Pig Dice
+              </div>
+              <div class="card-body">
+                <h4 class="card-text">Play the Game</h4>
+                <p class="card-text">To start the game please pick a side and roll</p>
+                <a href="#pigzeus">Start</a>
+              </div>
+              <div class="card-footer text-muted text-center">
+                Rules of the game are in help.
+              </div>
             </div>
-            <div class="card-footer text-muted">
-              Copyright (Copyright)
-            </div>
+
+        </div>
+
+      </section>
+      <section id="pigzeus">
+
+        <div class="row">
+          <div class="newgame">
+            <button type="button" class="btn-newgame" name="newgame">New Game</button>
+          </div>
+          <div class="card-deck clearfix">
+
+              <div class="card">
+                <img src="" class="card-img-top">
+                <div class="card-body gon-panel active">
+                  <div class="card-title player-name" id="gon">Gon</div>
+                  <div class="card-text score" id="gscore">99</div>
+                  <div class="card-text display-current">
+                    <span class="current-label">Current</span>
+                    <span class="current-score" id="gcurrent">0</span>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="btn-roll" name="button">Roll Dice</button>
+                    <button type="button" class="btn-hold" name="button">Hold</button>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <im src="" class="card-img-top">
+                <div class="card-body killua-panel">
+                    <div class="card-title player-name" id="killua">Killua</div>
+                    <div class="card-text score" id="kscore">99</div>
+                    <div class="card-text display-current">
+                      <span class="current-label">Current</span>
+                      <span class="current-score" id="kcurrent">0</span>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="btn-roll" name="button">Roll Dice</button>
+                    <button type="button" class="btn-hold" name="button">Hold</button>
+                  </div>
+                </div>
+              </div>
+
           </div>
         </div>
-      </div>
+
+      </section>
+
+      <section id="help">
+        <div class="">
+
+        </div>
+      </section>
     </div>
   </body>
 </html>
