@@ -5,6 +5,8 @@
     <title>Pig Dice</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="container">
@@ -41,38 +43,41 @@
         <div class="row">
           <div class="newgame">
             <button type="button" class="btn-newgame" name="newgame">New Game</button>
-          </div>
-          <div class="card-deck clearfix">
+          </div><br>
+          <div class="card-deck">
 
               <div class="card">
                 <img src="" class="card-img-top">
-                <div class="card-body gon-panel active">
-                  <div class="card-title player-name" id="gon">Gon</div>
-                  <div class="card-text score" id="gscore">99</div>
+                <div class="card-body g-zone active">
+                  <div class="card-title gon" id="gon">Gon</div>
+                  <div class="card-text score" id="gscore">0</div>
                   <div class="card-text display-current">
                     <span class="current-label">Current</span>
-                    <span class="current-score" id="gcurrent">0</span>
+                    <span class="current-score" id="current-g">0</span>
                   </div>
                   <div class="card-footer">
-                    <button type="button" class="btn-roll" name="button">Roll Dice</button>
-                    <button type="button" class="btn-hold" name="button">Hold</button>
+                    <button type="button" id="btn-rock" name="button">Roll Dice</button>
+                    <button type="button" id="btn-paper" name="button">Hold</button>
                   </div>
                 </div>
               </div>
 
+              <div class="card">
+                <img src="images/dice-1.png" alt="Dice" class="dice">
+              </div>
 
               <div class="card">
                 <im src="" class="card-img-top">
-                <div class="card-body killua-panel">
-                    <div class="card-title player-name" id="killua">Killua</div>
-                    <div class="card-text score" id="kscore">99</div>
+                <div class="card-body k-zone">
+                    <div class="card-title killua" id="killua">Killua</div>
+                    <div class="card-text score" id="kscore">0</div>
                     <div class="card-text display-current">
                       <span class="current-label">Current</span>
-                      <span class="current-score" id="kcurrent">0</span>
+                      <span class="current-score" id="current-g">0</span>
                   </div>
                   <div class="card-footer">
-                    <button type="button" class="btn-roll" name="button">Roll Dice</button>
-                    <button type="button" class="btn-hold" name="button">Hold</button>
+                    <button type="button" class="btn-speed" name="button">Roll Dice</button>
+                    <button type="button" class="btn-bolt" name="button">Hold</button>
                   </div>
                 </div>
               </div>
