@@ -5,8 +5,45 @@
 
 body {
   font-family: Times, sans-serif;
-  background: #3F4545;
+  background-image: url(../images/fito.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   line-height: 1.2;
   height: 100vh;
   overflow: hidden;
+}
+
+.hunter {
+  line-height: 12px;
+  width: 60px;
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+.scissor1 {
+  display: none;
+}
+
+.scissor2 {
+  display: none;
+}
+
+.winner {
+  display: none;
+}
+
+.killua-board {
+  float: right;
+}
+
+.gon-board {
+  float: left;
 }
