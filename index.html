@@ -10,15 +10,6 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#pigzeus">Pig Dice</a></li>
-          <li><a href="#help">Help</a></li>
-        </ul>
-      </nav>
-      <section id="about">
-
         <div class="row">
 
             <div class="card">
@@ -37,61 +28,61 @@
 
         </div>
 
-      </section>
-      <section id="pigzeus">
-
         <div class="row">
           <div class="newgame">
-            <button type="button" class="btn-newgame" name="newgame">New Game</button>
+            <button type="button" class="btn-rewind" name="newgame">New Game</button>
           </div><br>
-          <div class="card-deck">
-
-              <div class="card">
-                <img src="" class="card-img-top">
-                <div class="card-body g-zone active">
-                  <div class="card-title gon" id="gon">Gon</div>
-                  <div class="card-text score" id="gscore">0</div>
-                  <div class="card-text display-current">
-                    <span class="current-label">Current</span>
-                    <span class="current-score" id="current-g">0</span>
-                  </div>
-                  <div class="card-footer">
-                    <button type="button" id="btn-rock" name="button">Roll Dice</button>
-                    <button type="button" id="btn-paper" name="button">Hold</button>
-                  </div>
+        <br><div class="card-deck clearfix">
+              <div class="col-lg-4">
+                <div class="card clearfix">
+                    <img src="" class="card-img-top">
+                  <div class="card-body">
+                    <div class="hunter-0-zone active"
+                      <div class="card-title gon" id="gon">Gon</div>
+                      <div class="card-text score" id="score-0">0</div>
+                      <div class="card-text display-current">
+                        <span class="current-label">Current</span>
+                        <span class="current-score" id="current-0">0</span>
+                      </div>
+                      <div class="card-footer">
+                        <button type="button" id="btn-rock" name="button">Roll Dice</button>
+                        <button type="button" id="btn-paper" name="button">Hold</button>
+                      </div>
+                    </div>
                 </div>
               </div>
-
+          </div>
+            <div class="col-lg-4">
               <div class="card">
                 <img src="images/dice-1.png" alt="Dice" class="dice">
               </div>
-
-              <div class="card">
-                <im src="" class="card-img-top">
-                <div class="card-body k-zone">
-                    <div class="card-title killua" id="killua">Killua</div>
-                    <div class="card-text score" id="kscore">0</div>
-                    <div class="card-text display-current">
-                      <span class="current-label">Current</span>
-                      <span class="current-score" id="current-g">0</span>
-                  </div>
-                  <div class="card-footer">
-                    <button type="button" class="btn-speed" name="button">Roll Dice</button>
-                    <button type="button" class="btn-bolt" name="button">Hold</button>
+            </div>
+              <div class="col-lg-4">
+                <div class="card">
+                    <im src="" class="card-img-top">
+                  <div class="card-body">
+                    <div class="hunter-1-zone">
+                      <div class="card-title killua" id="killua">Killua</div>
+                      <div class="card-text score" id="score-1">0</div>
+                      <div class="card-text display-current">
+                        <span class="current-label">Current</span>
+                        <span class="current-score" id="current-1">0</span>
+                      </div>
+                      <div class="card-footer">
+                        <button type="button" class="btn-rock" name="button">Roll Dice</button>
+                        <button type="button" class="btn-paper" name="button">Hold</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
+            </div>
           </div>
         </div>
 
-      </section>
-
-      <section id="help">
         <div class="">
 
         </div>
-      </section>
+
     </div>
   </body>
 </html>
