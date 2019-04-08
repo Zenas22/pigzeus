@@ -121,11 +121,11 @@ $(document).ready(function(){
     $("#total-current2").text(newKillua.score);
   });
 
-//Player Two holding and passing
+//Killua hold
   $("#paper2").click(function(){
     newKillua.tally();
     $("#score-2").text(newKillua.finalScore);
-    pass2();
+    paper2();
   });
 });
 
@@ -168,7 +168,7 @@ var paper2 = function(){
 
 
 //Bussines logic
-//New Player Constructor
+//newPlayer Constructor
 var Player = function(name){
   this.name = name;
   this.score = [];
@@ -177,7 +177,7 @@ var Player = function(name){
   this.finalScore = [];
 };
 
-//Function to run if dice roll is above one to add all individual roll scores
+//Prototypes
 Player.prototype.win = function(){
   var total = 0;
   this.rolls.forEach(function(roll){
@@ -189,12 +189,12 @@ Player.prototype.win = function(){
   this.score.push(score);
 };
 
-//Function to run if dice roll is one to delete round score
+
 Player.prototype.lose = function(){
   this.rolls = [];
 };
 
-//Function adding each round's score to get total score
+
 Player.prototype.tally = function(){
   this.rolls = [];
   this.tallys.push(parseInt(this.score));
@@ -210,39 +210,39 @@ Player.prototype.tally = function(){
   this.score.push(0);
 };
 
-//Function to test if a player has reached 100 points
+
 Player.prototype.finish = function(){
   var check = parseInt(this.score) + parseInt(this.finalScore);
   if(check >= 100){
     $(document).ready(function(){
-      $(".celebration").fadeIn();
-      $(".player1-board").slideUp();
-      $(".player2-board").slideUp();
-      $(".roll-one1").hide();
-      $(".roll-one2").hide();
+      $(".winner").fadeIn();
+      $(".gon-board").slideUp();
+      $(".killua-board").slideUp();
+      $(".scissor1").hide();
+      $(".scissor2").hide();
     });
-    document.getElementById("celebration").src = "images/celebration.gif";
+    document.getElementById("winner").src = "images/";
     document.getElementById("winner").innerHTML = this.name;
   };
 };
 
-//Function to roll dice for Player One
+//Gon play function
 var play1 = function(){
   var dice = [1,2,3,4,5,6];
 
   var diceRoll = dice[Math.floor(Math.random() * dice.length)];
 
-  document.getElementById("turn-count1").innerHTML = diceRoll;
+  document.getElementById("current-1").innerHTML = diceRoll;
 
   if(diceRoll === 1){
-    document.getElementById("dice1").src = "images/dice1.png";
+    document.getElementById("speed1").src = "images/dice-1.png";
     newGon.lose();
     newKillua.score = [];
     newKillua.score.push(0);
-    pass1();
+    paper1();
     $(document).ready(function(){
-      $(".roll-one1").show();
-      $(".roll-one2").hide();
+      $(".scissor1").show();
+      $(".scissor2").hide();
     });
   }
   else{
@@ -251,29 +251,29 @@ var play1 = function(){
     newGon.finish();
     xHunter.forEach(function(number){
       if(diceRoll === number){
-        document.getElementById("dice1").src = "images/dice" + number + ".png";
+        document.getElementById("speed1").src = "images/dice-" + number + ".png";
       }
     })
   };
 };
 
-//Function to roll dice for Player Two
+//Killua play function
 var play2 = function(){
   var dice = [1,2,3,4,5,6];
 
   var diceRoll = dice[Math.floor(Math.random() * dice.length)];
 
-  document.getElementById("turn-count2").innerHTML = diceRoll;
+  document.getElementById("current-2").innerHTML = diceRoll;
 
   if(diceRoll === 1){
-    document.getElementById("dice2").src = "images/dice1.png";
+    document.getElementById("speed2").src = "images/dice-1.png";
     newKillua.lose();
     newGon.score = [];
     newGon.score.push(0);
-    pass2();
+    paper2();
     $(document).ready(function(){
-      $(".roll-one2").show();
-      $(".roll-one1").hide();
+      $(".scissor2").show();
+      $(".scissor1").hide();
     });
   }
   else{
@@ -282,7 +282,7 @@ var play2 = function(){
     newKillua.finish();
     xHunter.forEach(function(number){
       if(diceRoll === number){
-        document.getElementById("dice2").src = "images/dice" + number + ".png";
+        document.getElementById("speed2").src = "images/dice-" + number + ".png";
       }
     })
   }
